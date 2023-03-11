@@ -1,2 +1,84 @@
 @use "reset";
 @use "fonts";
+
+$palette: (
+  "Black": #151515,
+  "Dark Grey": #242424,
+  "Green": #4ee1a0,
+  "Grey": #d9d9d9,
+  "White": #ffffff,
+);
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  background: map-get($palette, "Black");
+}
+
+// Typography ******************************************
+.heading-xl {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: -1.14px;
+  text-align: center;
+  color: map-get($palette, "White");
+}
+
+%heading-l {
+  font-family: Space Grotesk;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: -1px;
+  text-align: center;
+  color: map-get($palette, "White");
+}
+
+%heading-m {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  color: map-get($palette, "White");
+}
+
+@mixin body($font-size, $line-height) {
+  font-size: $font-size;
+  font-weight: 500;
+  line-height: $line-height;
+  text-align: center;
+  color: map-get($palette, "Grey");
+}
+
+%body-m {
+  @include body(16px, 26px);
+}
+
+%body-l {
+  @include body(18px, 28px);
+}
+
+.button {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: 2.29px;
+  color: map-get($palette, "White");
+  text-transform: uppercase;
+  padding-bottom: 10px;
+  // Reset link and button styles
+  cursor: pointer;
+  text-decoration: none;
+  background: none;
+  border: none {
+    bottom: solid 2px map-get($palette, "Green");
+  }
+}
+
+.button:hover {
+  color: map-get($palette, "Green");
+}
+// *****************************************************

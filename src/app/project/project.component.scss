@@ -1,0 +1,28 @@
+@use "styles" as *;
+
+.title {
+  margin-top: 20px;
+  @extend %heading-m;
+  text-transform: uppercase;
+}
+
+.skills {
+  margin-top: 7px;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 18px;
+}
+
+.skill {
+  @extend %body-l;
+  text-transform: uppercase;
+}
+
+.links {
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}

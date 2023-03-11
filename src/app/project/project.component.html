@@ -1,8 +1,10 @@
 <img [src]="small" alt="" srcset="{{ small }} 686w, {{ large }} 1080w"
     sizes="(min-width: 1440px) calc(50vw - 180px), (min-width: 768px) calc(50vw - 44px), calc(100vw - 32px)">
-<h1><ng-content></ng-content></h1>
-<ul *ngIf="skills.length">
-  <li *ngFor="let skill of skills">{{ skill }}</li>
+<h1 class="title"><ng-content></ng-content></h1>
+<ul class="skills" *ngIf="skills.length">
+  <li class="skill" *ngFor="let skill of skills">{{ skill }}</li>
 </ul>
-<a [attr.href]="project">View project</a>
-<a [attr.href]="code">View code</a>
+<ul class="links">
+  <li><a class="button" [attr.href]="project">View project</a></li>
+  <li><a class="button" [attr.href]="code">View code</a></li>
+</ul>

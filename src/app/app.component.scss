@@ -1,0 +1,107 @@
+@use "styles" as *;
+
+.upper-body {
+  margin: 20px 16px 0;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.author-name {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: -0.33px;
+  color: map-get($palette, "White");
+}
+
+.social-links {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 25.6px;
+  margin-top: 20px;
+}
+
+.social-logo {
+  height: 20px;
+}
+
+.headshot {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 175px;
+  z-index: -1;
+}
+
+.hero {
+  margin-top: 331px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.dev {
+  text-decoration: underline map-get($palette, "Green");
+  text-underline-offset: 6px;
+}
+
+.hero-body {
+  @extend %body-m;
+}
+
+.skills {
+  $border: 1px solid map-get($palette, "White");
+  display: grid;
+  gap: 24px;
+  margin: 80px 0;
+  padding: 40px 0;
+  border: {
+    top: $border;
+    bottom: $border;
+  }
+
+  dt {
+    @extend %heading-l;
+  }
+
+  dd {
+    @extend %body-m;
+  }
+}
+
+.projects {
+  &-header {
+    display: flex;
+  }
+
+  &-title {
+    margin-right: auto;
+  }
+
+  display: grid;
+  margin-top: 40px;
+  gap: 40px;
+}
+
+.footer {
+  margin-top: 80px;
+  padding: 60px 16px;
+  background: map-get($palette, "Dark Grey");
+}
+
+.contact-body {
+  @extend %body-m;
+  margin-top: 20px;
+}
+
+.contact-form {
+  margin-top: 50px;
+}
