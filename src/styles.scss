@@ -79,7 +79,8 @@ body {
   }
 }
 
-.button:hover {
+.button:hover, .button:focus {
   color: map-get($palette, "Green");
+  outline: none;
 }
 // *****************************************************
