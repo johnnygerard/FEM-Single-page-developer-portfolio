@@ -95,7 +95,8 @@
           #message="ngModel"></textarea>
       <p class="error" *ngIf="message.errors?.['required'] && message.touched">*Required</p>
     </div>
-    <button class="form-button button" [disabled]="f.invalid" (click)="OnSubmit(f)">Send message</button>
+    <button class="form-button button" [disabled]="f.invalid" (click)="OnSubmit(f)">Send
+      message</button>
   </form>
 
   <ng-container *ngTemplateOutlet="nav"></ng-container>
@@ -106,23 +107,23 @@
     <h1 class="author-name">adamkeyes</h1>
     <ul class="social-links">
       <li>
-        <a href="https://example.com/github/adamkeyes">
+        <a class="filter" href="https://example.com/github/adamkeyes">
           <img class="social-logo" src="/assets/images/icon-github.svg" alt="GitHub profile">
         </a>
       </li>
       <li>
-        <a href="https://example.com/frontend-mentor/adamkeyes">
+        <a class="filter" href="https://example.com/frontend-mentor/adamkeyes">
           <img class="social-logo" src="/assets/images/icon-frontend-mentor.svg"
               alt="Frontend Mentor profile">
         </a>
       </li>
       <li>
-        <a href="https://example.com/linkedin/adamkeyes">
+        <a class="filter" href="https://example.com/linkedin/adamkeyes">
           <img class="social-logo" src="/assets/images/icon-linkedin.svg" alt="LinkedIn profile">
         </a>
       </li>
       <li>
-        <a href="https://example.com/twitter/adamkeyes">
+        <a class="filter" href="https://example.com/twitter/adamkeyes">
           <img class="social-logo" src="/assets/images/icon-twitter.svg" alt="Twitter profile">
         </a>
       </li>

@@ -18,17 +18,29 @@
   color: map-get($palette, "White");
 }
 
-.social-links {
-  padding: 0;
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 25.6px;
-  margin-top: 20px;
+.social {
+  &-links {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25.6px;
+    margin-top: 20px;
+  }
+
+  &-logo {
+    height: 20px;
+  }
 }
 
-.social-logo {
-  height: 20px;
+.filter {
+  filter: brightness(0) invert(1); // Convert to white
+}
+
+.filter:hover,
+.filter:focus {
+  filter: none;
+  outline: none;
 }
 
 .headshot {
