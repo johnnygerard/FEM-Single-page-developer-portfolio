@@ -1,5 +1,9 @@
 @use "styles" as *;
 
+.thumbnail {
+  width: 100%;
+}
+
 .title {
   margin-top: 20px;
   @extend %heading-m;
