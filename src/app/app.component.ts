@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { NgForm, NgModel } from "@angular/forms";
 
 type Skill = Readonly<{
   name: string;
@@ -19,4 +20,8 @@ export class AppComponent {
     { name: "React", years: 3 },
     { name: "Sass", years: 3 },
   ];
+
+  protected OnSubmit(form: NgForm) {
+    form.reset();
+  }
 }

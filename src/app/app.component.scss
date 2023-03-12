@@ -111,29 +111,64 @@
   gap: 32px;
 }
 
-#form {
-  &-name,
-  &-email,
-  &-message {
-    @extend %body-m;
-    width: 100%;
-    padding-left: 24px;
-    letter-spacing: -0.22px;
-    text-align: left;
-    text-transform: uppercase;
-    background: none;
-    outline: none;
-    border: none {
-      bottom: solid 1px map-get($palette, "White");
-    }
+.form-control {
+  @extend %body-m;
+  width: 100%;
+  padding: 0 0 0 24px;
+  letter-spacing: -0.22px;
+  text-align: left;
+  text-transform: uppercase;
+  background: none;
+  outline: none;
+  border: none {
+    bottom: solid 1px map-get($palette, "White");
   }
+}
 
-  &-name,
-  &-email {
-    padding-bottom: 16px;
-  }
+input.form-control {
+  padding-bottom: 16px;
+}
+
+textarea.form-control {
+  resize: none;
+  display: block;
+}
+
+.ng-valid.ng-touched:not(form) {
+  border-bottom-color: map-get($palette, "Green");
+}
+
+.ng-invalid.ng-touched:not(form) {
+  border-bottom-color: map-get($palette, "Red");
 }
 
 .form-button {
   align-self: flex-end;
+}
+
+.error {
+  &-container {
+    position: relative;
+  }
+  &-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: map-get($palette, "Red");
+    border: solid 1px map-get($palette, "Red");
+    border-radius: 50%;
+    height: 24px;
+    width: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: -0.17px;
+  color: map-get($palette, "Red");
+  position: absolute;
+  right: 0;
+  bottom: calc(-16px - 5px); // -16px for the height
 }
