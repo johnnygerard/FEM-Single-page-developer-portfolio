@@ -6,6 +6,7 @@
   </header>
 
   <div role="main">
+    <img class="rings rings-one" src="/assets/images/pattern-rings.svg" alt="">
     <picture>
       <!-- Desktop -->
       <source media="(min-width: 1440px)" srcset="/assets/images/image-profile-desktop.webp">
@@ -30,6 +31,10 @@
         <dd>{{ skill.years }} Years Experience</dd>
       </div>
     </dl>
+
+    <div class="anchor">
+      <img class="rings rings-two" src="/assets/images/pattern-rings.svg" alt="">
+    </div>
 
     <div class="projects-header">
       <h1 class="projects-title heading-xl">Projects</h1>
@@ -99,6 +104,7 @@
     </div>
     <button class="form-button button" [disabled]="f.invalid" (click)="OnSubmit(f)">Send
       message</button>
+    <img class="rings rings-three" src="/assets/images/pattern-rings.svg" alt="">
   </form>
 
   <div class="nav">

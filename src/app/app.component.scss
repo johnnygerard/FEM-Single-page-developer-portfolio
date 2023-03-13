@@ -1,5 +1,28 @@
 @use "styles" as *;
 
+.rings {
+  min-width: 530px;
+  min-height: 129px;
+  position: absolute;
+  z-index: -2;
+
+  &-one {
+    top: 124px;
+    right: 50%;
+  }
+
+  &-two {
+    top: calc(-80px - 129px / 2); // - margin - half height
+    left: 50%;
+  }
+
+  &-three {
+    z-index: 0;
+    bottom: 97px;
+    right: 50%;
+  }
+}
+
 .upper-body {
   margin: 20px 16px 0;
 }
@@ -89,6 +112,10 @@
   }
 }
 
+.anchor {
+  position: relative;
+}
+
 .projects {
   &-header {
     display: flex;
@@ -121,6 +148,7 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
+  position: relative; // For rings decoration
 }
 
 .form-control {
