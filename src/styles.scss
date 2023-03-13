@@ -10,6 +10,9 @@ $palette: (
   "White": #ffffff,
 );
 
+$tablet-breakpoint: 768px;
+$desktop-breakpoint: 1440px;
+
 html {
   scroll-behavior: smooth;
 }
