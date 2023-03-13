@@ -1,0 +1,210 @@
+@use "styles" as *;
+
+.upper-body {
+  margin: 20px 16px 0;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.author-name {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: -0.33px;
+  color: map-get($palette, "White");
+}
+
+.social {
+  &-links {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25.6px;
+    margin-top: 20px;
+  }
+
+  &-logo {
+    height: 20px;
+  }
+}
+
+.filter {
+  filter: brightness(0) invert(1); // Convert to white
+}
+
+.filter:hover,
+.filter:focus {
+  filter: none;
+  outline: none;
+}
+
+.headshot {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 175px;
+  z-index: -1;
+}
+
+.hero {
+  margin-top: 331px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.dev {
+  text-decoration: underline map-get($palette, "Green");
+  text-underline-offset: 6px;
+}
+
+.hero-body {
+  @extend %body-m;
+}
+
+.skills {
+  $border: 1px solid map-get($palette, "White");
+  display: grid;
+  gap: 24px;
+  margin: 80px 0;
+  padding: 40px 0;
+  border: {
+    top: $border;
+    bottom: $border;
+  }
+
+  dt {
+    @extend %heading-l;
+  }
+
+  dd {
+    @extend %body-m;
+  }
+}
+
+.anchor {
+  position: relative;
+}
+
+.frame {
+  $rings-height: 129px;
+  height: $rings-height;
+  width: 186px;
+  background: url("/assets/images/pattern-rings.svg");
+  position: absolute;
+
+  &-one {
+    top: calc(-80px - $rings-height / 2);
+    right: -16px;
+  }
+
+  &-two {
+    background-position: right;
+    left: -16px;
+    bottom: 8px - calc($rings-height / 2);
+  }
+}
+
+.projects {
+  &-header {
+    display: flex;
+  }
+
+  &-title {
+    margin-right: auto;
+  }
+
+  display: grid;
+  margin-top: 40px;
+  gap: 40px;
+}
+
+.footer {
+  margin-top: 80px;
+  padding: 60px 16px;
+  background: map-get($palette, "Dark Grey");
+}
+
+.contact-body {
+  @extend %body-m;
+  margin-top: 20px;
+}
+
+.contact-form {
+  margin: 50px 0 39px;
+  padding-bottom: 87px;
+  border-bottom: solid 1px map-get($palette, "White");
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  position: relative; // For rings decoration
+}
+
+.form-control {
+  @extend %body-m;
+  width: 100%;
+  padding: 0 0 0 24px;
+  letter-spacing: -0.22px;
+  text-align: left;
+  text-transform: uppercase;
+  background: none;
+  outline: none;
+  border: none {
+    bottom: solid 1px map-get($palette, "White");
+  }
+}
+
+input.form-control {
+  padding-bottom: 16px;
+}
+
+textarea.form-control {
+  resize: none;
+  display: block;
+}
+
+.ng-valid.ng-touched:not(form) {
+  border-bottom-color: map-get($palette, "Green");
+}
+
+.ng-invalid.ng-touched:not(form) {
+  border-bottom-color: map-get($palette, "Red");
+}
+
+.form-button {
+  align-self: flex-end;
+}
+
+.error {
+  &-container {
+    position: relative;
+  }
+  &-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: map-get($palette, "Red");
+    border: solid 1px map-get($palette, "Red");
+    border-radius: 50%;
+    height: 24px;
+    width: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: -0.17px;
+  color: map-get($palette, "Red");
+  position: absolute;
+  right: 0;
+  bottom: calc(-16px - 5px); // -16px for the height
+}

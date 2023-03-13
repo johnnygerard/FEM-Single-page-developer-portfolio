@@ -1,0 +1,141 @@
+<div class="upper-body">
+  <header>
+    <nav class="nav">
+      <ng-container *ngTemplateOutlet="nav"></ng-container>
+    </nav>
+  </header>
+
+  <div role="main">
+    <picture>
+      <!-- Desktop -->
+      <source media="(min-width: 1440px)" srcset="/assets/images/image-profile-desktop.webp">
+      <!-- Tablet -->
+      <source media="(min-width: 768px)" srcset="/assets/images/image-profile-tablet.webp">
+      <!-- Mobile -->
+      <img class="headshot" src="/assets/images/image-profile-mobile.webp" alt="">
+    </picture>
+
+    <div class="hero">
+      <h1 class="heading-xl">Nice to meet you! I'm <span class="dev">Adam Keyes</span>.</h1>
+      <p class="hero-body">
+        Based in the UK, I'm a front-end developer passionate about
+        building accessible web apps that users love.
+      </p>
+      <a class="button" href="#form-name">Contact me</a>
+    </div>
+
+    <dl class="skills">
+      <div *ngFor="let skill of skills">
+        <dt>{{ skill.name }}</dt>
+        <dd>{{ skill.years }} Years Experience</dd>
+      </div>
+    </dl>
+
+    <div class="anchor">
+      <div class="frame frame-one"></div>
+    </div>
+
+    <div class="projects-header">
+      <h1 class="projects-title heading-xl">Projects</h1>
+      <a class="button" href="#form-name">Contact me</a>
+    </div>
+
+    <div class="projects">
+      <app-project [skills]="['HTML', 'CSS']" small="/assets/images/thumbnail-project-1-small.webp"
+          large="/assets/images/thumbnail-project-1-large.webp">
+        Design portfolio
+      </app-project>
+      <app-project [skills]="['HTML', 'CSS']" small="/assets/images/thumbnail-project-2-small.webp"
+          large="/assets/images/thumbnail-project-2-large.webp"
+          project="https://fem-skilled-e-learning-lp-jgerard.pages.dev/"
+          code="https://github.com/johnnygerard/FEM-Skilled-e-learning-landing-page">
+        E-learning landing page
+      </app-project>
+      <app-project [skills]="['HTML', 'CSS', 'JavaScript']"
+          small="/assets/images/thumbnail-project-3-small.webp"
+          large="/assets/images/thumbnail-project-3-large.webp">
+        Todo web app
+      </app-project>
+      <app-project [skills]="['HTML', 'CSS', 'JavaScript']"
+          small="/assets/images/thumbnail-project-4-small.webp"
+          large="/assets/images/thumbnail-project-4-large.webp">
+        Entertainment web app
+      </app-project>
+      <app-project [skills]="['HTML', 'CSS', 'JavaScript']"
+          small="/assets/images/thumbnail-project-5-small.webp"
+          large="/assets/images/thumbnail-project-5-large.webp">
+        Memory Game
+      </app-project>
+      <app-project [skills]="['HTML', 'CSS', 'JavaScript']"
+          small="/assets/images/thumbnail-project-6-small.webp"
+          large="/assets/images/thumbnail-project-6-large.webp">
+        Art gallery showcase
+      </app-project>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <h1 class="heading-xl">Contact</h1>
+
+  <p class="contact-body">
+    I would love to hear about your project and how I could help. Please
+    fill in the form, and I’ll get back to you as soon as possible.
+  </p>
+
+  <form class="contact-form" #f="ngForm">
+    <div class="error-container">
+      <input class="form-control" name="name" ngModel required placeholder="name" id="form-name"
+          #name="ngModel">
+      <p class="error" *ngIf="name.errors?.['required'] && name.touched">*Required</p>
+    </div>
+    <div class="error-container">
+      <input class="form-control" name="email" ngModel required placeholder="email" type="email"
+          email #email="ngModel">
+      <span class="error-icon" *ngIf="email.errors?.['email']">!</span>
+      <p class="error" *ngIf="email.errors?.['email']">Sorry, invalid format here</p>
+      <p class="error" *ngIf="email.errors?.['required'] && email.touched">*Required</p>
+    </div>
+    <div class="error-container">
+      <textarea class="form-control" name="message" ngModel required placeholder="message" rows="4"
+          #message="ngModel"></textarea>
+      <div class="anchor">
+        <div class="frame frame-two"></div>
+      </div>
+      <p class="error" *ngIf="message.errors?.['required'] && message.touched">*Required</p>
+    </div>
+    <button class="form-button button" [disabled]="f.invalid" (click)="OnSubmit(f)">Send
+      message</button>
+  </form>
+
+  <div class="nav">
+    <ng-container *ngTemplateOutlet="nav"></ng-container>
+  </div>
+</footer>
+
+<ng-template #nav>
+  <h1 class="author-name">adamkeyes</h1>
+  <ul class="social-links">
+    <li>
+      <a class="filter" href="https://example.com/github/adamkeyes">
+        <img class="social-logo" src="/assets/images/icon-github.svg" alt="GitHub profile">
+      </a>
+    </li>
+    <li>
+      <a class="filter" href="https://example.com/frontend-mentor/adamkeyes">
+        <img class="social-logo" src="/assets/images/icon-frontend-mentor.svg"
+            alt="Frontend Mentor profile">
+      </a>
+    </li>
+    <li>
+      <a class="filter" href="https://example.com/linkedin/adamkeyes">
+        <img class="social-logo" src="/assets/images/icon-linkedin.svg" alt="LinkedIn profile">
+      </a>
+    </li>
+    <li>
+      <a class="filter" href="https://example.com/twitter/adamkeyes">
+        <img class="social-logo" src="/assets/images/icon-twitter.svg" alt="Twitter profile">
+      </a>
+    </li>
+  </ul>
+</ng-template>
