@@ -58,15 +58,19 @@
   flex-direction: column;
   align-items: center;
   gap: 24px;
+
+  &-title {
+    text-align: center;
+  }
+
+  &-body {
+    @extend %body-m;
+  }
 }
 
 .dev {
   text-decoration: underline map-get($palette, "Green");
   text-underline-offset: 6px;
-}
-
-.hero-body {
-  @extend %body-m;
 }
 
 .skills {
@@ -131,19 +135,25 @@
   background: map-get($palette, "Dark Grey");
 }
 
-.contact-body {
-  @extend %body-m;
-  margin-top: 20px;
-}
+.contact {
+  &-title {
+    text-align: center;
+  }
 
-.contact-form {
-  margin: 50px 0 39px;
-  padding-bottom: 87px;
-  border-bottom: solid 1px map-get($palette, "White");
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  position: relative; // For rings decoration
+  &-body {
+    @extend %body-m;
+    margin-top: 20px;
+  }
+
+  &-form {
+    margin: 50px 0 39px;
+    padding-bottom: 87px;
+    border-bottom: solid 1px map-get($palette, "White");
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    position: relative; // For rings decoration
+  }
 }
 
 .form-control {
