@@ -1,28 +1,5 @@
 @use "styles" as *;
 
-.rings {
-  min-width: 530px;
-  min-height: 129px;
-  position: absolute;
-  z-index: -2;
-
-  &-one {
-    top: 124px;
-    right: 50%;
-  }
-
-  &-two {
-    top: calc(-80px - 129px / 2); // - margin - half height
-    left: 50%;
-  }
-
-  &-three {
-    z-index: 0;
-    bottom: 97px;
-    right: 50%;
-  }
-}
-
 .upper-body {
   margin: 20px 16px 0;
 }
@@ -114,6 +91,25 @@
 
 .anchor {
   position: relative;
+}
+
+.frame {
+  $rings-height: 129px;
+  height: $rings-height;
+  width: 186px;
+  background: url("/assets/images/pattern-rings.svg");
+  position: absolute;
+
+  &-one {
+    top: calc(-80px - $rings-height / 2);
+    right: -16px;
+  }
+
+  &-two {
+    background-position: right;
+    left: -16px;
+    bottom: 8px - calc($rings-height / 2);
+  }
 }
 
 .projects {
