@@ -1,7 +1,7 @@
 @use "styles" as *;
 
 .upper-body {
-  margin: 20px 16px 0;
+  margin: 20px 16px 80px;
 }
 
 .nav {
@@ -127,7 +127,6 @@
 }
 
 .footer {
-  margin-top: 80px;
   padding: 60px 16px;
   background: map-get($palette, "Dark Grey");
 }
