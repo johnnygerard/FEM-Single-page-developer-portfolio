@@ -1,6 +1,6 @@
 <img class="thumbnail" [src]="small" alt="" srcset="{{ small }} 686w, {{ large }} 1080w"
     sizes="(min-width: 1440px) calc(50vw - 180px), (min-width: 768px) calc(50vw - 44px), calc(100vw - 32px)">
-<h1 class="title"><ng-content></ng-content></h1>
+<h2 class="title"><ng-content></ng-content></h2>
 <ul class="skills" *ngIf="skills.length">
   <li class="skill" *ngFor="let skill of skills">{{ skill }}</li>
 </ul>
