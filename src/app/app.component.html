@@ -1,6 +1,8 @@
 <div class="upper-body">
   <header>
-    <ng-container *ngTemplateOutlet="nav"></ng-container>
+    <nav class="nav">
+      <ng-container *ngTemplateOutlet="nav"></ng-container>
+    </nav>
   </header>
 
   <div role="main">
@@ -99,34 +101,34 @@
       message</button>
   </form>
 
-  <ng-container *ngTemplateOutlet="nav"></ng-container>
+  <div class="nav">
+    <ng-container *ngTemplateOutlet="nav"></ng-container>
+  </div>
 </footer>
 
 <ng-template #nav>
-  <nav class="nav">
-    <h1 class="author-name">adamkeyes</h1>
-    <ul class="social-links">
-      <li>
-        <a class="filter" href="https://example.com/github/adamkeyes">
-          <img class="social-logo" src="/assets/images/icon-github.svg" alt="GitHub profile">
-        </a>
-      </li>
-      <li>
-        <a class="filter" href="https://example.com/frontend-mentor/adamkeyes">
-          <img class="social-logo" src="/assets/images/icon-frontend-mentor.svg"
-              alt="Frontend Mentor profile">
-        </a>
-      </li>
-      <li>
-        <a class="filter" href="https://example.com/linkedin/adamkeyes">
-          <img class="social-logo" src="/assets/images/icon-linkedin.svg" alt="LinkedIn profile">
-        </a>
-      </li>
-      <li>
-        <a class="filter" href="https://example.com/twitter/adamkeyes">
-          <img class="social-logo" src="/assets/images/icon-twitter.svg" alt="Twitter profile">
-        </a>
-      </li>
-    </ul>
-  </nav>
+  <h1 class="author-name">adamkeyes</h1>
+  <ul class="social-links">
+    <li>
+      <a class="filter" href="https://example.com/github/adamkeyes">
+        <img class="social-logo" src="/assets/images/icon-github.svg" alt="GitHub profile">
+      </a>
+    </li>
+    <li>
+      <a class="filter" href="https://example.com/frontend-mentor/adamkeyes">
+        <img class="social-logo" src="/assets/images/icon-frontend-mentor.svg"
+            alt="Frontend Mentor profile">
+      </a>
+    </li>
+    <li>
+      <a class="filter" href="https://example.com/linkedin/adamkeyes">
+        <img class="social-logo" src="/assets/images/icon-linkedin.svg" alt="LinkedIn profile">
+      </a>
+    </li>
+    <li>
+      <a class="filter" href="https://example.com/twitter/adamkeyes">
+        <img class="social-logo" src="/assets/images/icon-twitter.svg" alt="Twitter profile">
+      </a>
+    </li>
+  </ul>
 </ng-template>
