@@ -122,10 +122,8 @@
 .projects {
   &-header {
     display: flex;
-  }
-
-  &-title {
-    margin-right: auto;
+    justify-content: space-between;
+    align-items: center;
   }
 
   display: grid;
