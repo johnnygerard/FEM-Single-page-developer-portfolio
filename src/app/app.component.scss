@@ -1,7 +1,8 @@
 @use "styles" as *;
 
 .upper-body {
-  margin: 20px 16px 80px;
+  margin: 0 16px;
+  padding-top: 20px;
 }
 
 .nav {
@@ -106,19 +107,36 @@
   position: relative;
 }
 
-.frame {
-  $rings-height: 129px;
-  height: $rings-height;
+.circle {
+  $size: 129px;
+  width: calc($size / 2);
+  height: $size;
+  background: url("/assets/images/pattern-circle.svg");
+  position: absolute;
+  top: 254px;
+  right: 0;
+}
+
+$rings-height: 129px;
+
+.rings {
   width: 186px;
+  height: $rings-height;
   background: url("/assets/images/pattern-rings.svg");
   position: absolute;
 
   &-one {
+    background-position: right;
+    top: 124px;
+    z-index: -1;
+  }
+
+  &-two {
     top: calc(-80px - $rings-height / 2);
     right: -16px;
   }
 
-  &-two {
+  &-three {
     background-position: right;
     left: -16px;
     bottom: 8px - calc($rings-height / 2);
@@ -138,6 +156,7 @@
 }
 
 .footer {
+  margin-top: 80px;
   padding: 60px 16px;
   background: map-get($palette, "Dark Grey");
 }
@@ -239,8 +258,32 @@ textarea.form-control {
     line-height: 28px;
   }
 
+  .circle {
+    top: 471px;
+  }
+
+  .rings {
+    &-one {
+      width: 265px;
+      top: 86px;
+    }
+
+    &-two {
+      width: 198px;
+      top: - calc(35px + $rings-height);
+      right: -32px;
+    }
+
+    &-three {
+      width: 162px;
+      top: 6px;
+      left: -162px;
+    }
+  }
+
   .upper-body {
-    margin: 32px 32px 100px;
+    margin: 0 32px;
+    padding-top: 32px;
   }
 
   .nav {
@@ -249,7 +292,6 @@ textarea.form-control {
   }
 
   .author-name {
-    // margin-right: auto;
     font-size: 32px;
     letter-spacing: -0.44px;
   }
@@ -319,6 +361,7 @@ textarea.form-control {
   }
 
   .footer {
+    margin-top: 100px;
     padding: 60px 0 40px;
   }
 

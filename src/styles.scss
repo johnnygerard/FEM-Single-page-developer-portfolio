@@ -18,13 +18,8 @@ html {
 }
 
 body {
-  $circle-size: 129px;
   font-family: "Space Grotesk", sans-serif;
   background-color: map-get($palette, "Black");
-  background-image: url("/assets/images/pattern-circle.svg"),
-    url("/assets/images/pattern-rings.svg");
-  background-repeat: no-repeat;
-  background-position: calc(100% + $circle-size / 2) 254px, -342px 124px;
 }
 
 // Typography ******************************************
