@@ -10,18 +10,16 @@ $palette: (
   "White": #ffffff,
 );
 
+$tablet-breakpoint: 768px;
+$desktop-breakpoint: 1440px;
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  $circle-size: 129px;
   font-family: "Space Grotesk", sans-serif;
   background-color: map-get($palette, "Black");
-  background-image: url("/assets/images/pattern-circle.svg"),
-    url("/assets/images/pattern-rings.svg");
-  background-repeat: no-repeat;
-  background-position: calc(100% + $circle-size / 2) 254px, -342px 124px;
 }
 
 // Typography ******************************************
@@ -30,7 +28,6 @@ body {
   font-weight: 700;
   line-height: 40px;
   letter-spacing: -1.14px;
-  text-align: center;
   color: map-get($palette, "White");
 }
 
@@ -40,7 +37,6 @@ body {
   font-weight: 700;
   line-height: 40px;
   letter-spacing: -1px;
-  text-align: center;
   color: map-get($palette, "White");
 }
 
@@ -51,20 +47,11 @@ body {
   color: map-get($palette, "White");
 }
 
-@mixin body($font-size, $line-height) {
-  font-size: $font-size;
+%body {
+  font-size: 16px;
   font-weight: 500;
-  line-height: $line-height;
-  text-align: center;
+  line-height: 26px;
   color: map-get($palette, "Grey");
-}
-
-%body-m {
-  @include body(16px, 26px);
-}
-
-%body-l {
-  @include body(18px, 28px);
 }
 
 .button {
@@ -88,5 +75,13 @@ body {
 .button:focus {
   color: map-get($palette, "Green");
   outline: none;
+}
+
+@media (min-width: $tablet-breakpoint) {
+  .heading-xl {
+    font-size: 72px;
+    line-height: 72px;
+    letter-spacing: -2.05px;
+  }
 }
 // *****************************************************
