@@ -83,4 +83,12 @@ body {
   color: map-get($palette, "Green");
   outline: none;
 }
+
+@media (min-width: $tablet-breakpoint) {
+  .heading-xl {
+    font-size: 72px;
+    line-height: 72px;
+    letter-spacing: -2.05px;
+  }
+}
 // *****************************************************
