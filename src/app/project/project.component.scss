@@ -1,5 +1,10 @@
 @use "styles" as *;
 
+%body {
+  font-size: 18px;
+  line-height: 28px;
+}
+
 .thumbnail {
   width: 100%;
 }
@@ -19,7 +24,7 @@
 }
 
 .skill {
-  @extend %body-l;
+  @extend %body;
   text-transform: uppercase;
 }
 

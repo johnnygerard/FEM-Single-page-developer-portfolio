@@ -53,20 +53,12 @@ body {
   color: map-get($palette, "White");
 }
 
-@mixin body($font-size, $line-height) {
-  font-size: $font-size;
+%body {
+  font-size: 16px;
   font-weight: 500;
-  line-height: $line-height;
+  line-height: 26px;
   text-align: center;
   color: map-get($palette, "Grey");
-}
-
-%body-m {
-  @include body(16px, 26px);
-}
-
-%body-l {
-  @include body(18px, 28px);
 }
 
 .button {

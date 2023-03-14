@@ -64,7 +64,7 @@
   }
 
   &-body {
-    @extend %body-m;
+    @extend %body;
   }
 }
 
@@ -89,7 +89,7 @@
   }
 
   dd {
-    @extend %body-m;
+    @extend %body;
   }
 }
 
@@ -141,7 +141,7 @@
   }
 
   &-body {
-    @extend %body-m;
+    @extend %body;
     margin-top: 20px;
   }
 
@@ -157,7 +157,7 @@
 }
 
 .form-control {
-  @extend %body-m;
+  @extend %body;
   width: 100%;
   padding: 0 0 0 24px;
   letter-spacing: -0.22px;
