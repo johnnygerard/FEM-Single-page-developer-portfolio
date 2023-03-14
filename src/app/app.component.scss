@@ -294,4 +294,11 @@ textarea.form-control {
       margin-top: 14px;
     }
   }
+
+  .projects {
+    margin-top: 60px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 60px 24px;
+  }
 }
