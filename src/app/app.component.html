@@ -78,39 +78,41 @@
 </div>
 
 <footer class="footer">
-  <h1 class="contact-title heading-xl">Contact</h1>
-
-  <p class="contact-body">
-    I would love to hear about your project and how I could help. Please
-    fill in the form, and I’ll get back to you as soon as possible.
-  </p>
-
-  <form class="contact-form" #f="ngForm">
-    <div class="error-container">
-      <input class="form-control" name="name" ngModel required placeholder="name" id="form-name"
-          #name="ngModel">
-      <p class="error" *ngIf="name.errors?.['required'] && name.touched">*Required</p>
+  <div class="contact">
+    <div class="contact-intro">
+      <h1 class="contact-title heading-xl">Contact</h1>
+      <p class="contact-body">
+        I would love to hear about your project and how I could help. Please
+        fill in the form, and I’ll get back to you as soon as possible.
+      </p>
     </div>
-    <div class="error-container">
-      <input class="form-control" name="email" ngModel required placeholder="email" type="email"
-          email #email="ngModel">
-      <span class="error-icon" *ngIf="email.errors?.['email']">!</span>
-      <p class="error" *ngIf="email.errors?.['email']">Sorry, invalid format here</p>
-      <p class="error" *ngIf="email.errors?.['required'] && email.touched">*Required</p>
-    </div>
-    <div class="error-container">
-      <textarea class="form-control" name="message" ngModel required placeholder="message" rows="4"
-          #message="ngModel"></textarea>
-      <div class="anchor">
-        <div class="frame frame-two"></div>
+    <form class="contact-form" #f="ngForm">
+      <div class="error-container">
+        <input class="form-control" name="name" ngModel required placeholder="name" id="form-name"
+            #name="ngModel">
+        <p class="error" *ngIf="name.errors?.['required'] && name.touched">*Required</p>
       </div>
-      <p class="error" *ngIf="message.errors?.['required'] && message.touched">*Required</p>
-    </div>
-    <button class="form-button button" [disabled]="f.invalid" (click)="OnSubmit(f)">Send
-      message</button>
-  </form>
+      <div class="error-container">
+        <input class="form-control" name="email" ngModel required placeholder="email" type="email"
+            email #email="ngModel">
+        <span class="error-icon" *ngIf="email.errors?.['email']">!</span>
+        <p class="error" *ngIf="email.errors?.['email']">Sorry, invalid format here</p>
+        <p class="error" *ngIf="email.errors?.['required'] && email.touched">*Required</p>
+      </div>
+      <div class="error-container">
+        <textarea class="form-control" name="message" ngModel required placeholder="message"
+            rows="4" #message="ngModel"></textarea>
+        <div class="anchor">
+          <div class="frame frame-two"></div>
+        </div>
+        <p class="error" *ngIf="message.errors?.['required'] && message.touched">*Required</p>
+      </div>
+      <button class="form-button button" [disabled]="f.invalid" (click)="OnSubmit(f)">Send
+        message</button>
+    </form>
+  </div>
 
-  <div class="nav">
+  <div class="nav nav-footer">
     <ng-container *ngTemplateOutlet="nav"></ng-container>
   </div>
 </footer>

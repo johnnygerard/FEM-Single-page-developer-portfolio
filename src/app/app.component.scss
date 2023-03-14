@@ -8,6 +8,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  &-footer {
+    margin-top: 87px;
+    border-top: solid 1px map-get($palette, "White");
+    padding-top: 39px;
+  }
 }
 
 .author-name {
@@ -137,6 +143,10 @@
 }
 
 .contact {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
   &-title {
     text-align: center;
   }
@@ -148,9 +158,6 @@
   }
 
   &-form {
-    margin: 50px 0 39px;
-    padding-bottom: 87px;
-    border-bottom: solid 1px map-get($palette, "White");
     display: flex;
     flex-direction: column;
     gap: 32px;
@@ -238,14 +245,23 @@ textarea.form-control {
 
   .nav {
     flex-direction: row;
+    justify-content: space-between;
   }
 
   .author-name {
-    margin-right: auto;
+    // margin-right: auto;
+    font-size: 32px;
+    letter-spacing: -0.44px;
   }
 
-  .social-links {
-    margin-top: 0;
+  .social {
+    &-links {
+      margin-top: 0;
+    }
+
+    &-logo {
+      width: 24px;
+    }
   }
 
   .headshot {
@@ -300,5 +316,21 @@ textarea.form-control {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(3, 1fr);
     gap: 60px 24px;
+  }
+
+  .footer {
+    padding: 60px 0 40px;
+  }
+
+  .nav {
+    &-footer {
+      margin: 92px 32px 0;
+      padding-top: 30px;
+    }
+  }
+
+  .contact {
+    gap: 48px;
+    padding: 0 162px;
   }
 }
