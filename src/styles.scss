@@ -42,7 +42,6 @@ body {
   font-weight: 700;
   line-height: 40px;
   letter-spacing: -1px;
-  text-align: center;
   color: map-get($palette, "White");
 }
 
@@ -57,7 +56,6 @@ body {
   font-size: 16px;
   font-weight: 500;
   line-height: 26px;
-  text-align: center;
   color: map-get($palette, "Grey");
 }
 
