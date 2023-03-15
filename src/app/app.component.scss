@@ -87,6 +87,7 @@
   gap: 24px;
   margin: 80px 0;
   padding: 40px 0;
+
   border: {
     top: $border;
     bottom: $border;
@@ -193,6 +194,7 @@ $rings-height: 129px;
   text-transform: uppercase;
   background: none;
   outline: none;
+
   border: none {
     bottom: solid 1px map-get($palette, "White");
   }
@@ -223,6 +225,7 @@ textarea.form-control {
   &-container {
     position: relative;
   }
+
   &-icon {
     position: absolute;
     right: 0;
@@ -236,6 +239,7 @@ textarea.form-control {
     justify-content: center;
     align-items: center;
   }
+
   font-size: 12px;
   font-weight: 500;
   line-height: 16px;
@@ -252,6 +256,12 @@ textarea.form-control {
     line-height: 28px;
   }
 
+  %heading-l {
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: -1.5px;
+  }
+
   .circle {
     width: 129px;
     top: 521px;
@@ -265,10 +275,13 @@ textarea.form-control {
     }
 
     &-two {
+      width: 291px;
+      top: -85px - $rings-height;
+      right: -165px;
     }
 
-    &-three {
-    }
+    // &-three {
+    // }
   }
 
   .upper-body {
@@ -315,7 +328,21 @@ textarea.form-control {
   }
 
   .skills {
-    margin-top: 219px;
+    margin: 219px 0 140px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: 58px 0;
+    padding: 72px 0 0;
+    border-bottom: none;
+
+    &-name {
+      text-align: left;
+    }
+
+    &-year {
+      text-align: left;
+      margin-top: 14px;
+    }
   }
 }
 
