@@ -1,4 +1,4 @@
-import { Component, Input } from "@angular/core";
+import { Component, HostListener, Input } from "@angular/core";
 
 @Component({
   selector: "app-project",
@@ -13,4 +13,12 @@ export class ProjectComponent {
   // Image URLs
   @Input() small = "";
   @Input() large = "";
+
+  protected viewportWidth = innerWidth;
+  protected readonly desktopBreakpoint = 1440;
+
+  @HostListener("window:resize")
+  private onResize() {
+    this.viewportWidth = innerWidth;
+  }
 }
