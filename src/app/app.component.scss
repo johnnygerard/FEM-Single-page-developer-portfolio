@@ -246,7 +246,80 @@ textarea.form-control {
   bottom: calc(-16px - 5px); // -16px for the height
 }
 
-@media (min-width: $tablet-breakpoint) {
+@media (min-width: $desktop-breakpoint) {
+  %body {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .circle {
+    width: 129px;
+    top: 521px;
+    right: 445px + 165px - calc(129px / 2);
+  }
+
+  .rings {
+    &-one {
+      width: 430px;
+      top: 133px;
+    }
+
+    &-two {
+    }
+
+    &-three {
+    }
+  }
+
+  .upper-body {
+    margin: 0 165px;
+    padding-top: 40px;
+  }
+
+  .nav {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .social-links {
+    margin: 0 29.5px 0 0;
+  }
+
+  .hero {
+    align-items: flex-start;
+    margin-top: 127px;
+    gap: 0;
+
+    &-newline-two {
+      display: inline;
+    }
+
+    &-title {
+      text-align: left;
+    }
+
+    &-body {
+      margin: 43px 0 66px;
+      width: 445px;
+      text-align: left;
+    }
+  }
+
+  .headshot {
+    $width: 445px;
+    width: $width;
+    height: 720px;
+    top: 0;
+    left: calc(100% - $width - 165px);
+    transform: none;
+  }
+
+  .skills {
+    margin-top: 219px;
+  }
+}
+
+@media (min-width: $tablet-breakpoint) and (max-width: calc($desktop-breakpoint - 1px)) {
   %heading-l {
     font-size: 48px;
     line-height: 56px;

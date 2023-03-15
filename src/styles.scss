@@ -77,11 +77,19 @@ body {
   outline: none;
 }
 
-@media (min-width: $tablet-breakpoint) {
+@media (min-width: $tablet-breakpoint) and (max-width: calc($desktop-breakpoint - 1px)) {
   .heading-xl {
     font-size: 72px;
     line-height: 72px;
     letter-spacing: -2.05px;
+  }
+}
+
+@media (min-width: $desktop-breakpoint) {
+  .heading-xl {
+    font-size: 88px;
+    line-height: 88px;
+    letter-spacing: -2.5px;
   }
 }
 // *****************************************************
