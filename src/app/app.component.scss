@@ -140,7 +140,7 @@ $rings-height: 129px;
   &-three {
     background-position: right;
     left: -16px;
-    bottom: 8px - calc($rings-height / 2);
+    top: - calc($rings-height + 10px);
   }
 }
 
@@ -280,8 +280,11 @@ textarea.form-control {
       right: -165px;
     }
 
-    // &-three {
-    // }
+    &-three {
+      width: 325px;
+      top: calc(92px - $rings-height - 47px);
+      left: -165px;
+    }
   }
 
   .upper-body {
@@ -431,8 +434,8 @@ textarea.form-control {
 
     &-three {
       width: 162px;
-      top: 6px;
-      left: -162px;
+      top: calc(92px - $rings-height - 27px);
+      left: 0;
     }
   }
 

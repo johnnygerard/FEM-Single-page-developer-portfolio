@@ -106,14 +106,15 @@
       <div class="error-container">
         <textarea class="form-control" name="message" ngModel required placeholder="message"
             rows="4" #message="ngModel"></textarea>
-        <div class="anchor">
-          <div class="rings rings-three"></div>
-        </div>
         <p class="error" *ngIf="message.errors?.['required'] && message.touched">*Required</p>
       </div>
       <button class="form-button button" [disabled]="f.invalid" (click)="OnSubmit(f)">Send
         message</button>
     </form>
+  </div>
+
+  <div class="anchor">
+    <div class="rings rings-three"></div>
   </div>
 
   <div class="nav nav-footer">
