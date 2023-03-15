@@ -1,10 +1,21 @@
-<img class="thumbnail" [src]="small" alt="" srcset="{{ small }} 686w, {{ large }} 1080w"
-    sizes="(min-width: 1440px) calc(50vw - 180px), (min-width: 768px) calc(50vw - 44px), calc(100vw - 32px)">
+<div class="anchor">
+  <ng-container *ngIf="viewportWidth >= desktopBreakpoint">
+    <ng-container *ngTemplateOutlet="links"></ng-container>
+  </ng-container>
+  <img class="thumbnail" [src]="small" alt="" srcset="{{ small }} 686w, {{ large }} 1080w"
+      sizes="(min-width: 1440px) calc(50vw - 180px), (min-width: 768px) calc(50vw - 44px), calc(100vw - 32px)">
+</div>
 <h2 class="title"><ng-content></ng-content></h2>
 <ul class="skills" *ngIf="skills.length">
   <li class="skill" *ngFor="let skill of skills">{{ skill }}</li>
 </ul>
-<ul class="links">
-  <li><a class="button" [attr.href]="project">View project</a></li>
-  <li><a class="button" [attr.href]="code">View code</a></li>
-</ul>
+<ng-container *ngIf="viewportWidth < desktopBreakpoint">
+  <ng-container *ngTemplateOutlet="links"></ng-container>
+</ng-container>
+
+<ng-template #links>
+  <ul class="links">
+    <li><a class="button" [attr.href]="project">View project</a></li>
+    <li><a class="button" [attr.href]="code">View code</a></li>
+  </ul>
+</ng-template>
