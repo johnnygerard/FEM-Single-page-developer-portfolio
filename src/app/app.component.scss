@@ -351,6 +351,54 @@ textarea.form-control {
     grid-template-rows: repeat(3, 1fr);
     gap: 69px 30px;
   }
+
+  .footer {
+    margin-top: 139px;
+    padding: 84px 165px 92px;
+  }
+
+  .contact {
+    flex-direction: row;
+    gap: 0;
+    justify-content: space-between;
+
+    &-title {
+      text-align: left;
+    }
+
+    &-body {
+      margin-top: 36px;
+      width: 445px;
+      text-align: left;
+    }
+
+    &-form {
+      width: 445px;
+    }
+  }
+
+  .nav {
+    &-footer {
+      margin-top: 92px;
+      padding-top: 47px;
+
+      >.social-links {
+        margin: 0;
+      }
+    }
+  }
+
+  .social {
+    &-logo {
+      width: 24px;
+    }
+  }
+
+  .author-name {
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: -0.44px;
+  }
 }
 
 @media (min-width: $tablet-breakpoint) and (max-width: calc($desktop-breakpoint - 1px)) {
