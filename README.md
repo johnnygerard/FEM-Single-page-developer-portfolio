@@ -10,14 +10,16 @@ This is my solution to the [Single-page developer portfolio challenge](https://w
  - Figma
 
 ## Links
- - [Live version](https://fem-single-page-developer-portfolio-jgerard.pages.dev) hosted with [Cloudflare Pages](https://pages.cloudflare.com/)
- - [Solution]()
+ - [Website](https://fem-single-page-developer-portfolio-jgerard.vercel.app/) hosted with [Vercel](https://vercel.com/)
+ - [Solution](https://www.frontendmentor.io/solutions/singlepage-developer-portfolio-Pf1HpmEttZ)
 
-## Screenshots
-### Mobile
-![mobile screenshot](./screenshot-mobile.png)
+## Scrolling screenshots
 ### Desktop
-![desktop screenshot](./screenshot-desktop.png)
+![desktop scrolling screenshot](./screenshot-desktop.webp)
+### Tablet
+![tablet scrolling screenshot](./screenshot-tablet.webp)
+### Mobile
+![mobile scrolling screenshot](./screenshot-mobile.webp)
 
 ## About Frontend Mentor
 [Frontend Mentor](https://www.frontendmentor.io/) challenges help you improve your coding skills by building realistic projects.
