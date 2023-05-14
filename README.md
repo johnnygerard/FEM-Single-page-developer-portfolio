@@ -10,7 +10,7 @@ This is my solution to the [Single-page developer portfolio challenge](https://w
  - Figma
 
 ## Links
- - [Website](https://fem-single-page-developer-portfolio-jgerard.vercel.app/) hosted with [Vercel](https://vercel.com/)
+ - [Website](https://single-page-developer-portfolio.fem.jgerard.dev/) hosted with [Vercel](https://vercel.com/)
  - [Solution](https://www.frontendmentor.io/solutions/singlepage-developer-portfolio-Pf1HpmEttZ)
 
 ## Scrolling screenshots
